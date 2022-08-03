@@ -1,0 +1,19 @@
+protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<BreakfastFood>().HasData(
+                new BreakfastFood { FoodId = 1, FoodFullName = "Gabriel Comstock", FoodName = "Eggs", Cost = 3.50, TimeToPrepare = 5 },
+                new BreakfastFood { FoodId = 2, FoodFullName = "Person McName", FoodName = "Oatmeal", Cost = 1.50, TimeToPrepare = 10 }
+                );
+            builder.Entity<Music>().HasData(
+                new Music { MusicId = 1, MusicFullName = "Gabriel Comstock", GenreName = "Doom", Instrument = "Guitar", AverageLengthOfSong = 5},
+                new Music { MusicId = 1, MusicFullName = "Person McName", GenreName = "Drum and Bass", Instrument = "Drum", AverageLengthOfSong = 3}
+                );
+            builder.Entity<Hobby>().HasData(
+                new Hobby { HobbyId = 1, HobbyFullName = "Gabriel Comstock", CostOfHobby = 500, TypeOfHobby = "Sport", YearsDoingHobby = 5 },
+                new Hobby { HobbyId = 2, HobbyFullName = "Person McName", CostOfHobby = 1000, TypeOfHobby = "Gaming", YearsDoingHobby = 3 }
+                );
+            builder.Entity<Student>().HasData(
+                new Student { StudentId = 1, FullName = "Gabriel Comstock", Birthdate = 1994, CollegeProgram = "IT", YearInProgram = 5 },
+                new Student { StudentId = 2, FullName = "Person McName", Birthdate = 1990, CollegeProgram = "Music", YearInProgram = 3 }
+                );
+        }
